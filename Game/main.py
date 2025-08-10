@@ -18,7 +18,6 @@ pygame.display.set_caption('Space Invanders')
 
 
 font30 = pygame.font.SysFont('Constantia', 30)
-font40 = pygame.font.SysFont('Constantia', 40)
 
 
 explosion_fx = pygame.mixer.Sound("explosion.wav")
@@ -231,13 +230,13 @@ while run:
 			alien_bullet_group.update()
 		else:
 			if game_over == -1:
-				draw_text('GAME OVER!', font40, white, int(screen_width / 2 - 100), int(screen_height / 2 + 50))
+				draw_text('GAME OVER!', font30, white, int(screen_width / 2 - 100), int(screen_height / 2 + 90))
 			if game_over == 1:
-				draw_text('YOU WIN!', font40, white, int(screen_width / 2 - 100), int(screen_height / 2 + 50))
+				draw_text('YOU WIN!', font30, white, int(screen_width / 2 - 100), int(screen_height / 2 + 50))
 
 	if countdown > 0:
-		draw_text('GET READY!', font40, white, int(screen_width / 2 - 110), int(screen_height / 2 + 50))
-		draw_text(str(countdown), font40, white, int(screen_width / 2 - 10), int(screen_height / 2 + 100))
+		draw_text('GET READY!', font30, white, int(screen_width / 2 - 90), int(screen_height / 2 + 100))
+		draw_text(str(countdown), font30, white, int(screen_width / 2 - 10), int(screen_height / 2 + 120))
 		count_timer = pygame.time.get_ticks()
 		if count_timer - last_count > 1000:
 			countdown -= 1
